@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        @import url(https://fonts.googleapis.com/css?family=Merriweather);
+        $red: #e74c3c;
+
+        *,
+        *:before,
+        *:after {
+            box-sizing: border-box;
+        }
+
+        html, body {
+            background: #ffffff;
+            font-family: 'Merriweather', sans-serif;
+            padding: 1em;
+        }
+
+        h1 {
+            text-align: center;
+            color: #a8a8a8;
+            text-shadow: 1px 1px 0 rgba(255, 255, 255, 1);
+        }
+
+        form {
+            max-width: 600px;
+            text-align: center;
+            margin: 20px auto;
+        }
+
+        input, textarea {
+            border: 0;
+            outline: 0;
+            padding: 1em;
+            border-radius: 8px;
+            display: block;
+            width: 100%;
+            margin-top: 1em;
+            font-family: 'Merriweather', sans-serif;
+            box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+            resize: none;
+            background-color: #f1f1f1;
+        }
+
+        input:focus,
+        textarea:focus {
+            box-shadow: 0 0px 2px rgba(231, 76, 60, 1);
+        }
+
+        #input-submit {
+            color: white;
+            background: #e74c3c;
+            cursor: pointer;
+        }
+
+        #input-submit:hover {
+            box-shadow: 0 1px 1px 1px rgba(170, 170, 170, 0.6);
+        }
+
+        textarea {
+            height: 126px;
+            max-width: 100%;
+            width: 100%;
+            box-sizing: border-box;
+            background-color: #f1f1f1;
+        }
+
+        .half {
+            float: left;
+            width: 48%;
+            margin-bottom: 1em;
+        }
+
+        .right {
+            width: 50%;
+        }
+
+        .left {
+            margin-right: 2%;
+        }
+
+        @media (max-width: 480px) {
+            .half {
+                width: 100%;
+                float: none;
+                margin-bottom: 0;
+            }
+        }
+
+        /* Clearfix */
+        .cf:before,
+        .cf:after {
+            content: " ";
+            display: table;
+        }
+
+        .cf:after {
+            clear: both;
+        }
+
+        input[type="tel"] {
+           width: 100%;
+           padding: 1em;
+           border: 0;
+           outline: 0;
+           border-radius: 8px;
+           margin-top: 1em;
+           font-family: 'Merriweather', sans-serif;
+           box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+           resize: none;
+        }
+
+        input[type="tel"]:focus {
+           box-shadow: 0 0px 2px rgba(231, 76, 60, 1);
+        }
+
+        #input-message {
+        max-width: calc(95% - 1em); /* Maximális szélesség számítása - bal oldali margin miatt */
+        margin-top: 1em;
+        box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+        float: right;10
+        margin-right: 10px; /* Jobb oldali margin mértéke */
+        margin-left: 100px;
+        margin-bottom: 10px;
+        width: 100%;
+        height:212px
+}
+
+
+        #input-message:focus {
+            box-shadow: 0 0px 2px rgba(231, 76, 60, 1);
+        }
+    </style>
+</head>
+<body>
+    <h1>Jelentkezés tesztvezetésre</h1>
+    <center><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .car-model img {
+            width: 100000%;
+            max-width: 6700%;
+            height: auto;
+        }
+        .car-selection {
+            display: flex;
+            flex-direction: row ;
+            justify-content: space-between;
+            width: 250px;
+            margin-right: 350px;
+            align-items: center;
+            justify-content: center;
+        }
+        .btn-container {
+            display: flex;
+            flex-direction: column;
+            width: 250px;
+            margin-right: 11px;
+        }
+        .tds-btn {
+            height: 70px;
+            min-width: 230px;
+            border: none;
+            border: 2px solid #808080;
+            outline: ;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-bottom: 15px;
+            background-color: #FFFFFF;
+            color: #5C5E62;
+            font-weight: bold; /* Vastagabb betű */
+            text-align: center;
+        }
+        .selectedButton {
+            border: 4px solid blue;
+            color: black; /* Fekete szín, ha kiválasztva van */
+        }
+        .img-container {
+            margin-left: 2px;
+        }
+    </style>
+</head>
+<body>
+    <div class="car-selection">
+        <div class="btn-container">
+            <button class="tds-btn models tds-btn tds-btn--large selectedButton" data-model="ModelS" data-section="carSection" onclick="showImage('ModelS')">Model S</button>
+            <button class="tds-btn models tds-btn tds-btn--large" data-model="Model3" data-section="carSection" onclick="showImage('Model3')">Model 3</button>
+            <button class="tds-btn models tds-btn tds-btn--large" data-model="ModelX" data-section="carSection" onclick="showImage('ModelX')">Model X</button>
+            <button class="tds-btn models tds-btn tds-btn--large" data-model="ModelY" data-section="carSection" onclick="showImage('ModelY')">Model Y</button>
+        </div>
+        <div class="img-container">
+            <div class="car-model" id="carImage">
+                <img src="https://digitalassets.tesla.com/discovery-tesla-com/image/upload/f_auto,q_auto/TD_models.jpg" alt="Model S">
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function showImage(model) {
+            var carImage = document.getElementById("carImage");
+            carImage.innerHTML = '<img src="https://digitalassets.tesla.com/discovery-tesla-com/image/upload/f_auto,q_auto/TD_' + model.toLowerCase() + '.jpg" alt="' + model + '">';
+
+            var buttons = document.querySelectorAll(".models");
+            buttons.forEach(function(btn) {
+                btn.classList.remove("selectedButton");
+            });
+
+            event.currentTarget.classList.add("selectedButton");
+        }
+    </script>
+</body>
+</html>
+    </center>
+    <form class="cf">
+        <div class="half left cf">
+            <input type="text" id="input-name" placeholder="Keresztnév">
+            <input type="text" id="input-email" placeholder="Vezetéknév">
+            <input type="text" id="input-subject" placeholder="E-mail">
+            <input type="tel" id="input-phone" placeholder="Telefonszám">
+        </div>
+        <div class="half right cf">
+            <textarea name="message" type="text" id="input-message" placeholder="Megjegyzés"></textarea>
+        </div>  
+        <input type="submit" value="Beküldés" id="input-submit">
+    </form>
+</body>
+</html>
