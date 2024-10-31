@@ -1,10 +1,10 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jelentkezés tesztvezetésre</title>
-    <link rel="icon" href="https://png.pngtree.com/png-clipart/20210823/ourmid/pngtree-steering-wheel-4-png-image_3826235.jpg" type="image/icon type">
+    <title>Document</title>
     <link rel="stylesheet" href="style.css">
     <style>
         @import url(https://fonts.googleapis.com/css?family=Merriweather);
@@ -233,5 +233,28 @@
         </div>  
         <input type="submit" value="Beküldés" id="input-submit">
     </form>
+<script>
+    function showImage(model) {
+    var carImage = document.getElementById("carImage");
+    var newImage = document.createElement("img");
+    newImage.src = 'https://digitalassets.tesla.com/discovery-tesla-com/image/upload/f_auto,q_auto/TD_' + model.toLowerCase() + '.jpg';
+    newImage.alt = model;
+    newImage.classList.add('fade-in'); // Kezdetben fade-in osztály hozzáadása
+
+    // Miután az új kép betöltődött, megjelenítjük
+    newImage.onload = function() {
+        carImage.innerHTML = ''; // Töröljük a régi képet
+        carImage.appendChild(newImage); // Hozzáadjuk az új képet
+    };
+
+    // Gomb kijelölésének kezelése
+    var buttons = document.querySelectorAll(".models");
+    buttons.forEach(function(btn) {
+        btn.classList.remove("selectedButton");
+    });
+    event.currentTarget.classList.add("selectedButton");
+}
+
+</script>
 </body>
 </html>
